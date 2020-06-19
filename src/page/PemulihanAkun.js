@@ -41,7 +41,7 @@ class PemulihanAkun extends Component{
         {
           this.state.pemulihan? 
             <div className="card login-card mx-auto text-center">
-              <img className="login-logo kiri" src="logo.png" alt="INR"/><br/>
+              <img className="inr-logo kiri" src="logo.png" alt="INR"/><br/>
             <span>
               <img className="icon-account mx-auto" src="mdi_account_circle.png" alt="account"/>
               <h3>Pemulihan Akun</h3>

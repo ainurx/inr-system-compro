@@ -40,7 +40,7 @@ html, body, #root, .App {
   border-radius: 0%;
 }
 
-.login-logo{  
+.inr-logo{  
   width: 55px;
   height: 46px;
 }
@@ -52,8 +52,17 @@ html, body, #root, .App {
 
 .bg-img{
   max-width: 100%;
-  height: 635px;
+  height: 100vh;
   object-fit: cover;
+}
+
+.contain-img{
+  position: relative;
+}
+
+.absolute-logo{
+  position: absolute;
+  margin: 45px 0px 0px 43px;
 }
 
 .btn-login{

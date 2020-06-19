@@ -36,6 +36,7 @@ class Regis extends Component{
     return(
         <div className="row wrapper">
           <div className="col-md-6 contain-img">
+            <img className="inr-logo absolute-logo" src="Inready Logo 1 (Traced).png" alt="inr"/>
             <img className="bg-img" src="bg-regis.png" alt="bg-regis"/>
           </div>
           <div className="col-md-6 regis-col">
