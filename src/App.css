@@ -1,10 +1,83 @@
+html, body, #root, .App {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper{
+  width: 100%;
+}
+
+.kiri{
+  float: left;
+  margin-bottom: 21px;
+}
+
+.abuabu{
+  background-color: #F0F2F5;
+}
+
+.kuning{
+  background-color: #FCD340;
+}
+
+.main-body{
+  width: 100%;
+  height: 100%;
+}
+
+.icon-account{
+  width: 86px;
+  height: auto;
+}
+
+.login-card{
+  top: 15%;
+  padding: 46px;
+  width: fit-content;
+  border-radius: 0%;
+}
+
+.login-logo{  
+  width: 55px;
+  height: 46px;
+}
+
+.email-icon{
+  width: 96px;
+  height: auto;
+}
+
+.bg-img{
+  max-width: 100%;
+  height: 635px;
+  object-fit: cover;
+}
+
+.btn-login{
+  width: 271px;
+}
+
+.btn-regis{
+  width: 100%;
+}
+
+.text-yellow{
+  color: #FCC840;
+}
+
+.text-grey{
+  color: #999999;
+}
+
+.text-grey-2{
+  color: #bbbbbb;
+}
+
+.regis-col{
+  padding: 5% 10% 0px 10%;
 }
 
 img{
@@ -12,32 +85,9 @@ img{
   height: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .contain-img{
+    display: none;
   }
 }

@@ -5,11 +5,38 @@ import './App.css'
 
 import Home from'./components/Home'
 import About from'./components/About'
+import Login from'./components/Login'
+import Regis from'./components/Regis'
+import PemulihanAkun from'./components/PemulihanAkun'
+
+const bgLoginRegis = {
+  backgroudColor: '#F0F2F5'
+}
+
+const def={
+  backgroudColor: 'white'
+}
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      toLogin: true
+    }
+  }  
+
+  handleNavbar= ()=> {
+    this.setState(state=>({
+      toLogin : !state.toLogin
+    }))
+  }
+
   render(){
+    const toLogin = this.state.toLogin
+    
     return (
-      <Router>
+      <Router style="abuabu">
+        {toLogin ?
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">INREADY WORKGROUP</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +59,23 @@ class App extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="">Karya</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login" onClick={this.handleNavbar}>Login</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="regis" onClick={this.handleNavbar}>Daftar</Link>
+              </li>
             </ul>
           </div>
         </nav>
+        : null
+        }
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/about" component={About}/>
+          <Route path="/login" exact component={Login}/>
+          <Route path="/regis" exact component={Regis}/>
+          <Route path="/pemulihan-akun" component={PemulihanAkun}/>
         </Switch>
       </Router>
     )
