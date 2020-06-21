@@ -8,6 +8,7 @@ import About from'./page/About'
 import Login from'./page/Login'
 import Regis from'./page/Regis'
 import PemulihanAkun from'./page/PemulihanAkun'
+import SandiBaru from'./page/PemulihanAkun2'
 
 const bgLoginRegis = {
   backgroudColor: '#F0F2F5'
@@ -25,6 +26,7 @@ function App () {
           <Route path="/login" exact component={Login}/>
           <Route path="/regis" exact component={Regis}/>
           <Route path="/pemulihan-akun" component={PemulihanAkun}/>
+          <Route path="/sandi-baru" component={SandiBaru}/>
         </Switch>
     )
 }

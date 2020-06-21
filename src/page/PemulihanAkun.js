@@ -5,14 +5,14 @@ function EmailVerif(props){
   return(
     <div className="card login-card text-center mx-auto">
       <center>
-      <img src="mdi_email.png" alt="Email" className="email-icon"/> 
+      <img src="icon/mdi_email.png" alt="Email" className="email-icon"/> 
       </center>
       <br/>
       <h2>Pemulihan Akun</h2>
       <p className="text-grey">
         Kami baru saja mengirim email verifikasi ke
       </p>
-        <p><b>ainurrahmat1@gmail.com</b></p>
+        <p><b>inready@workgroup.com</b></p>
       <p className="text-grey">
         Ikuti tautan di email Anda untuk menyelesaikan pembuatan akun anda   
       </p>
@@ -25,38 +25,60 @@ class PemulihanAkun extends Component{
   constructor(props){
     super(props)
     this.state={
-      pemulihan: true
+      pemulihan: true,
+      email: ''
     }
   }
 
-  handlePemulihan = ()=>{
+  handleChange = (e)=>{
+    this.setState({
+      email: e.target.value
+    })
+  }
+
+  handlePemulihan = e =>{
+    e.preventDefault()
     this.setState({
       pemulihan: false
     })
+
+    const email = document.querySelector('#inputEmail4'),
+          emailText = document.querySelector('#emailText')
+
+    if(this.state.email == ''){
+      email.classList.add("false-input")
+      emailText.style.display = "block"     
+    }else{
+      email.classList.remove("false-input")
+      emailText.style.display = "none"
+    }
   }
 
   render(){
     return(
       <div className="main-body abuabu">
-        {
-          this.state.pemulihan? 
+        
+          {this.state.pemulihan?  
             <div className="card login-card mx-auto text-center">
-              <img className="inr-logo kiri" src="logo.png" alt="INR"/><br/>
+              <img className="inr-logo kiri" src="icon/logo.png" alt="INR"/><br/>
             <span>
-              <img className="icon-account mx-auto" src="mdi_account_circle.png" alt="account"/>
-              <h3>Pemulihan Akun</h3>
+              <img className="icon-account mx-auto" src="icon/mdi_account_circle.png" alt="account"/>
+              <h1>Pemulihan Akun</h1>
             </span>
-            <p className="text-grey">Masukkan Email untuk pemulihan akun <br/>
+            <p className="text-grey"><b>Masukkan Email untuk pemulihan akun</b> <br/>
               <span className="text-grey-2">Kami akan kirimkan kode verifikasi Email yang anda masukkan</span>
             </p>
-            <form onSubmit={this.handlePemulihan}>
-              <input type="email" className="form-control" id="inputEmail4" placeholder="Masukkan Email"/>
+            <form className="mx-auto" onSubmit={this.handlePemulihan}>
+              <label id="emailText" htmlFor="email" className="text-merah">Lengkapi Email anda !</label>
+              <input type="email" className="form-control" name="email"
+                id="inputEmail4" placeholder="Masukkan Email"
+                value={this.state.email} onChange={this.handleChange}/>
               <br/>
               <button type="submit" className="btn font-weight-bold kuning btn-login">Pulihkan</button>
             </form>
           </div>
           :<EmailVerif/>
-        }
+        } 
       </div>
     )
   }

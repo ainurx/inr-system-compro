@@ -4,7 +4,7 @@ import {Route, Link } from 'react-router-dom'
 function EmailVerif(props){
   return(
     <div className="text-center regis-col">
-      <img src="mdi_email.png" alt="Email" className="email-icon"/> 
+      <img src="icon/mdi_email.png" alt="Email" className="email-icon"/> 
       <h2>Verifikasi Email Anda</h2>
       <p className="text-grey">
         Kami baru saja mengirim email verifikasi ke
@@ -22,21 +22,102 @@ class Regis extends Component{
   constructor(props){
     super(props)
     this.state={
-      email: false
+      seePass1: true,
+      seePass2: true,
+      email: false,
+      gmail: '',
+      nama: '',
+      pass: '',
+      verifPass: ''
     }
   }
 
-  handleEmail = () =>{
+  handleChange = e =>{
+    const {name, value} = e.target
     this.setState({
-      email: true
+      [name] : value
     })
+  }
+
+  handleEmail = e =>{
+    e.preventDefault()
+    const nama = document.querySelector('#inputName'),
+          email = document.querySelector('#exampleInputEmail1'),
+          pass = document.querySelector('#inputBox1'),
+          verifPass = document.querySelector('#inputBox2'),
+          nameText = document.querySelector('#nameText'),
+          emailText = document.querySelector('#emailText'),
+          passText = document.querySelector('#passText'),
+          verifPassText = document.querySelector('#verifPassText')
+     
+    if(this.state.nama == ''){
+      nama.classList.add("false-input")
+      nameText.style.display = "block"     
+    }else{
+      nama.classList.remove("false-input")
+      nameText.style.display = "none"
+    } 
+    if(this.state.gmail == ''){
+      email.classList.add("false-input")
+      emailText.style.display = "block"     
+    }else{
+      email.classList.remove("false-input")
+      emailText.style.display = "none"
+    }  
+    if(this.state.pass.length <= 7){
+      pass.classList.add("false-input")
+      passText.style.display = "block"     
+    }else{
+      pass.classList.remove("false-input")
+      passText.style.display = "none"
+    } 
+    if(this.state.verifPass != this.state.pass){
+      verifPass.classList.add("false-input")
+      verifPassText.style.display = "block"     
+    }else{
+      verifPass.classList.remove("false-input")
+      verifPassText.style.display = "none"
+    } 
+  }
+
+  showPassword1 = ()=>{
+    this.setState(state =>({
+      seePass1: !this.state.seePass1
+    }))
+
+    const showPass1 = document.querySelector('#showPass1'),     
+          pass1 = document.querySelector('#pass1')
+      
+    if(this.state.seePass1 === false){
+      pass1.type = 'password'
+      showPass1.src ='icon/eye1.png'
+    }else{
+      pass1.type = 'text'
+      showPass1.src = 'icon/eye2.png'
+    }
+  }
+
+  showPassword2 = ()=>{
+    this.setState({
+      seePass2: !this.state.seePass2
+    })
+    const showPass2 = document.querySelector('#showPass2'),
+          pass2 = document.querySelector('#pass2')
+
+    if(this.state.seePass2 === false){
+      pass2.type = 'password'
+      showPass2.src ='icon/eye1.png'
+    }else{
+      pass2.type = 'text'
+      showPass2.src = 'icon/eye2.png'
+    }
   }
 
   render(){
     return(
         <div className="row wrapper">
           <div className="col-md-6 contain-img">
-            <img className="inr-logo absolute-logo" src="Inready Logo 1 (Traced).png" alt="inr"/>
+            <img className="inr-logo absolute-logo" src="icon/Inready Logo 1 (Traced).png" alt="inr"/>
             <img className="bg-img" src="bg-regis.png" alt="bg-regis"/>
           </div>
           <div className="col-md-6 regis-col">
@@ -44,13 +125,38 @@ class Regis extends Component{
             <div>
               <h1 className="text-center">Daftar</h1>
               <form onSubmit={this.handleEmail}>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"/>
+                <label id="nameText" htmlFor="nama" className="text-merah">Masukkan nama anda !</label>
+                <input type="text" className="form-control" onChange={this.handleChange}
+                  id="inputName" placeholder="Nama"
+                  value={this.state.nama} name="nama"/>
                 <br/>
-                <input type="text" className="form-control" id="inputName" placeholder="Nama"/>
+                <label id="emailText" htmlFor="gmail" className="text-merah">Lengkapi Email anda !</label>
+                <input type="email" className="form-control" onChange={this.handleChange}
+                  id="exampleInputEmail1" aria-describedby="emailHelp" 
+                  placeholder="Email" value={this.state.gmail}
+                  name="gmail"/>
                 <br/>
-                <input type="password" className="form-control" id="inputPassword4" placeholder="Kata Sandi"/>
+                <label id="passText" htmlFor="password" className="text-merah">Kata Sandi minimal 8 digit !</label>
+                <div id="inputBox1" className="input-box">
+                  <input type="password" className="my-pass" onChange={this.handleChange}
+                    id="pass1" placeholder="Kata Sandi"
+                    value={this.state.pass} name="pass"/>
+                  <span>
+                    <img id="showPass1" className="eye-icon" 
+                    src="icon/eye1.png" alt="lihat" onClick={this.showPassword1}/>
+                  </span>  
+                </div>
                 <br/>
-                <input type="password" className="form-control" id="inputPassword5" placeholder="Konfirmasi Sandi"/>
+                <label id="verifPassText" htmlFor="verifPass" className="text-merah">Konfirmasi Kata Sandi anda !</label>
+                <div id="inputBox2" className="input-box">
+                  <input type="password" className="my-pass" onChange={this.handleChange}
+                    id="pass2" placeholder="Konfirmasi Sandi"
+                    value={this.state.verifPass} name="verifPass"/>
+                  <span>
+                    <img id="showPass2" className="eye-icon" 
+                    src="icon/eye1.png" alt="lihat" onClick={this.showPassword2}/>
+                  </span>                  
+                </div>
                 <br/>
                 <button type="submit" className="btn font-weight-bold kuning btn-regis">Daftar</button>
               </form>
