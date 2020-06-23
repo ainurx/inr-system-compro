@@ -34,7 +34,7 @@ class Login extends Component{
       emailText.style.display = "none" 
     }
 
-    if(this.state.password != 'inr123'){
+    if(this.state.password != 'inready123'){
       pw.classList.add("false-input")
       passText.style.display = "block"
     }else{
@@ -66,33 +66,35 @@ class Login extends Component{
         <div className="card login-card mx-auto">
           <img className="inr-logo" src="icon/logo.png" alt="Inready Workgroup"/>
           <h1 className="text-center">Masuk</h1>
-          <form className="mx-auto" onSubmit={this.handleSubmit}>
-            <label id="emailText" htmlFor="username" className="text-merah">Email anda salah !</label>
-            <input type="email" className="my-input form-control" 
-              id="inputEmail4" placeholder="Username" 
-              name="username" value={this.state.username}
-              onChange={this.handleChange}/>
-            <br/>
-            <label id="passText" htmlFor="password" className="text-merah">Katas sandi anda salah, Lupa Kata Sandi?</label> 
-              <div id="inputBox" className="input-box form-wrapper">
-                <input type="password" className="my-pass" 
-                id="inputPassword4" placeholder="Password" 
-                name="password" value={this.state.password}
+            <form className="mx-auto" onSubmit={this.handleSubmit}>
+              <label id="emailText" htmlFor="username" className="text-merah">Email anda salah !</label>
+              <input type="email" className="my-input form-control" 
+                id="inputEmail4" placeholder="Username" 
+                name="username" value={this.state.username}
                 onChange={this.handleChange}/>
-                <span>
-                  <img id="showPass" className="eye-icon" 
-                  src="icon/eye1.png" alt="lihat" onClick={this.showPassword}/>
-                </span>                
+              <br/>
+              <label id="passText" htmlFor="password" className="text-merah">Katas sandi anda salah, Lupa Kata Sandi?</label> 
+                <div id="inputBox" className="input-box form-wrapper">
+                  <input type="password" className="my-pass" 
+                  id="inputPassword4" placeholder="Password" 
+                  name="password" value={this.state.password}
+                  onChange={this.handleChange}/>
+                  <span>
+                    <img id="showPass" className="eye-icon" 
+                    src="icon/eye1.png" alt="lihat" onClick={this.showPassword}/>
+                  </span>                
+                </div>
+              <br/>
+              <button className="btn font-weight-bold kuning btn-login" >Masuk</button>
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                <label className="form-check-label" htmlFor="defaultCheck1">
+                  Remember me
+                </label>
               </div>
-            <br/>
-            <button className="btn font-weight-bold kuning btn-login" >Masuk</button>
-            <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-              <label className="form-check-label" htmlFor="defaultCheck1">
-                Remember me
-              </label>
-            </div>
-          </form>
+            </form>
+            
+            
           <Link className="text-center text-yellow" to="/pemulihan-akun">Lupa Password ?</Link>
 
           <span className="text-center">Belum punya akun ? <Link className="text-yellow" to="/regis">Daftar</Link></span>

@@ -39,6 +39,11 @@ html, body, #root, .App {
   height: auto;
 }
 
+.alert-icon{
+  width: 24px;
+  height: 24px;
+}
+
 .login-card{
   top: 15%;
   padding: 46px;
@@ -143,5 +148,10 @@ img{
 @media (max-width: 768px) {
   .contain-img{
     display: none;
+  }
+
+  .login-card{
+    width: 90%;
+    padding: 20px;
   }
 }

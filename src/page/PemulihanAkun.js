@@ -70,7 +70,7 @@ class PemulihanAkun extends Component{
             </p>
             <form className="mx-auto" onSubmit={this.handlePemulihan}>
               <label id="emailText" htmlFor="email" className="text-merah">Lengkapi Email anda !</label>
-              <input type="email" className="form-control" name="email"
+              <input type="email" className="my-input form-control" name="email"
                 id="inputEmail4" placeholder="Masukkan Email"
                 value={this.state.email} onChange={this.handleChange}/>
               <br/>
