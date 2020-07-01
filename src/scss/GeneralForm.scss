@@ -1,0 +1,65 @@
+.text-merah{
+  display: none;
+  font-size: 12px;
+  color: #EB5757;
+}
+
+.regis-col{
+  padding: 5% 10% 0px 10%;
+}
+
+.form-wrapper{
+  display: flex;
+}
+
+.false-input{
+  border: 1px solid #EB5757;
+}
+
+.my-pass{
+  width: 100%;
+  border: none;
+  &:focus{
+    outline: none;
+  }
+}
+
+.newPass{
+  width: 80%;
+}
+
+
+.input-box{
+  display: flex;
+  padding: 5px 5px 5px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  &:hover{
+    border: 1px solid #5bc0de;
+    box-shadow: 0 0 0 3px rgba(0,123,255,.25);
+  }
+}
+
+.eye-icon{
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+}
+
+.email-icon{
+  width: 96px;
+  height: auto;
+}
+
+.btn-regis{
+  width: 100%;
+}
+
+.btn-input{
+  width: 271px;
+}
+
+.icon-account{
+  width: 86px;
+  height: auto;
+}

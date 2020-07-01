@@ -15,6 +15,23 @@ html, body, #root, .App {
   margin-bottom: 21px;
 }
 
+.nav-logo{
+  width: 54px;
+  height: 46px;
+}
+
+.nav-colored{
+  background-color: #FCC840;
+}
+
+.navbar-default{
+  background-color: transparent;
+}
+
+.nav-link{
+  font-weight: bold;
+}
+
 .abuabu{
   background-color: #F0F2F5;
 }
@@ -76,10 +93,23 @@ html, body, #root, .App {
   width: 80%;
 }
 
+.search-icon{
+  width: 24px;
+  height: 24px;
+}
+
 .eye-icon{
   width: 25px;
   height: auto;
   cursor: pointer;
+}
+
+.artikel-wrapper{
+  position: relative;
+}
+
+.artikel-wrapper > div{
+  position: absolute;
 }
 
 .form-wrapper{
@@ -143,6 +173,19 @@ html, body, #root, .App {
 img{
   width: 100%;
   height: 400px;
+}
+
+.card{
+  width: 354px;
+}
+
+.card-img-top{
+  height: 291px;
+}
+
+.image-shape{
+  height: 300px;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,23 @@
+.bg-anggota{
+  background-color: $bgGreySecond;
+}
+
+.navigation-anggota{
+  list-style-type: none;
+  font-weight: bold;
+  color: $greyText;
+  
+    cursor: pointer;
+  
+}
+
+.card-anggota{
+  width: 114px;
+  border-radius: 0px 25px 25px 25px;
+  padding-top: 33px;
+  img{
+    width: 134px;
+    height: 134px;
+  }
+}
+

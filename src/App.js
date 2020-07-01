@@ -1,7 +1,7 @@
 import React from 'react'
 import {
         Link, Switch, Route, useRouteMatch} from 'react-router-dom'
-import './App.css'
+import './scss/_style.scss'
 
 import Home from'./page/Home'
 import About from'./page/About'
@@ -9,6 +9,10 @@ import Login from'./page/Login'
 import Regis from'./page/Regis'
 import PemulihanAkun from'./page/PemulihanAkun'
 import SandiBaru from'./page/PemulihanAkun2'
+import Artikel from'./page/Artikel'
+import DetailArtikel from './page/DetailArtikel'
+import Anggota from './page/Anggota'
+import DetailAnggota from './page/DetailAnggota'
 
 const bgLoginRegis = {
   backgroudColor: '#F0F2F5'
@@ -27,6 +31,10 @@ function App () {
           <Route path="/regis" exact component={Regis}/>
           <Route path="/pemulihan-akun" component={PemulihanAkun}/>
           <Route path="/sandi-baru" component={SandiBaru}/>
+          <Route path="/list-artikel" exact component={Artikel}/>
+          <Route path="/detail-artikel" component={DetailArtikel}/>
+          <Route path="/list-anggota" exact component={Anggota}/>
+          <Route path="/detail-anggota" component={DetailAnggota}/>
         </Switch>
     )
 }

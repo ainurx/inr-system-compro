@@ -158,7 +158,7 @@ class Regis extends Component{
                   </span>                  
                 </div>
                 <br/>
-                <button type="submit" className="btn font-weight-bold kuning btn-regis">Daftar</button>
+                <button type="submit" className="btn font-weight-bold bg-yellow btn-regis">Daftar</button>
               </form>
               <br/>
               <p className="text-center text-grey">Sudah punya akun ? <Link className="text-yellow" to="/login">Log in</Link></p>

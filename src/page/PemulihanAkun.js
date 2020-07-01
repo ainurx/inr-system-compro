@@ -56,10 +56,10 @@ class PemulihanAkun extends Component{
 
   render(){
     return(
-      <div className="main-body abuabu">
+      <div className="main-body bg-grey">
         
           {this.state.pemulihan?  
-            <div className="card login-card mx-auto text-center">
+            <div className="card mx-auto text-center">
               <img className="inr-logo kiri" src="icon/logo.png" alt="INR"/><br/>
             <span>
               <img className="icon-account mx-auto" src="icon/mdi_account_circle.png" alt="account"/>
@@ -74,7 +74,7 @@ class PemulihanAkun extends Component{
                 id="inputEmail4" placeholder="Masukkan Email"
                 value={this.state.email} onChange={this.handleChange}/>
               <br/>
-              <button type="submit" className="btn font-weight-bold kuning btn-login">Pulihkan</button>
+              <button type="submit" className="btn font-weight-bold bg-yellow btn-input">Pulihkan</button>
             </form>
           </div>
           :<EmailVerif/>

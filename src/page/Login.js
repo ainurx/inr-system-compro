@@ -62,13 +62,13 @@ class Login extends Component{
 
   render(){ 
     return(
-      <div className="mx-auto main-body abuabu">
+      <div className="mx-auto main-body bg-grey">
         <div className="card login-card mx-auto">
           <img className="inr-logo" src="icon/logo.png" alt="Inready Workgroup"/>
           <h1 className="text-center">Masuk</h1>
             <form className="mx-auto" onSubmit={this.handleSubmit}>
               <label id="emailText" htmlFor="username" className="text-merah">Email anda salah !</label>
-              <input type="email" className="my-input form-control" 
+              <input type="email" className="form-control" 
                 id="inputEmail4" placeholder="Username" 
                 name="username" value={this.state.username}
                 onChange={this.handleChange}/>
@@ -85,7 +85,7 @@ class Login extends Component{
                   </span>                
                 </div>
               <br/>
-              <button className="btn font-weight-bold kuning btn-login" >Masuk</button>
+              <button className="btn font-weight-bold bg-yellow btn-input" >Masuk</button>
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
                 <label className="form-check-label" htmlFor="defaultCheck1">

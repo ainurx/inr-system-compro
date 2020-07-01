@@ -84,7 +84,7 @@ class SandiBaru extends Component{
 
   render(){
     return(
-      <div className="main-body abuabu">
+      <div className="main-body bg-grey">
         {
           this.state.pemulihan? 
           <div className="card login-card mx-auto text-center">
@@ -122,7 +122,7 @@ class SandiBaru extends Component{
                 </span>                  
               </div>
               <br/>
-              <button type="submit" className="btn font-weight-bold kuning btn-login">Ubah Kata sandi</button>
+              <button type="submit" className="btn font-weight-bold bg-yellow btn-input">Ubah Kata sandi</button>
             </form>
           </div>
           :<EmailVerif/>
