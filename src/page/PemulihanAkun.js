@@ -3,7 +3,7 @@ import { Link, Route } from 'react-router-dom'
 
 function EmailVerif(props){
   return(
-    <div className="card login-card text-center mx-auto">
+    <div className="card card-pemulihan login-card text-center mx-auto">
       <center>
       <img src="icon/mdi_email.png" alt="Email" className="email-icon"/> 
       </center>
@@ -59,7 +59,7 @@ class PemulihanAkun extends Component{
       <div className="main-body bg-grey">
         
           {this.state.pemulihan?  
-            <div className="card mx-auto text-center">
+            <div className="card card-pemulihan mx-auto text-center">
               <img className="inr-logo kiri" src="icon/logo.png" alt="INR"/><br/>
             <span>
               <img className="icon-account mx-auto" src="icon/mdi_account_circle.png" alt="account"/>

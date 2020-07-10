@@ -1,0 +1,50 @@
+.nav-colored{
+  background-color: #FCC840;
+}
+
+.navbar-default{
+  background-color: transparent;
+}
+
+.nav-link{
+  font-weight: bold;
+  color: black !important;
+}
+
+.search-wrapper{
+  input{
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.search-icon{
+  width: 24px;
+  height: 24px;
+}
+
+.search-form{
+  position: absolute;
+  width: 500px;
+  height: 46px;
+  left: 1103px;
+  top: 19px;
+  padding-left: 12px; 
+
+  background: rgba(250, 250, 250, 0.5);
+  /* FAFAFA */
+
+  border: 1px solid #FAFAFA;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.search-input{
+  border: none;
+  background-color: transparent;
+  &:focus{
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
