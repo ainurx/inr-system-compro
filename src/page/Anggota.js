@@ -10,7 +10,7 @@ class Angkatan extends Component{
         <div className="row justify-content-center">  
           <div className="col-md-3 mx-auto">
             <Link className="card link-card card-anggota text-center" to="/detail-anggota">
-              <img className="rounded-circle mx-auto" src="8.jpg" alt="anggota"/>
+              <img className="rounde d-circle mx-auto" src="8.jpg" alt="anggota"/>
               <h3 className="text-black">Atun</h3>
               <p className="text-grey">full stack developer</p>
               <p className="text-grey">Angkatan 10</p>
@@ -94,7 +94,7 @@ class Anggota extends Component{
   render(){
     return(
       <div className="bg-anggota">
-        <Navbar navCallback={this.handleSearch}/>
+        <Navbar navCallback={this.handleSearch} anggotaActive="link-nav-active"/>
         <div className="d-flex artikel-wrapper justify-content-center text-center">
           <img className="image-shape" src="Subtract.png" alt="shape"/>
           <div className="position-absolute artikel-text">

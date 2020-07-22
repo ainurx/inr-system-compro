@@ -6,6 +6,10 @@
 @import './Anggota';
 @import './DetailAnggota';
 @import './Pemulihan.scss';
+@import './Karya.scss';
+@import './Kegiatan.scss';
+@import './Sidenav.scss';
+@import './Upload.scss';
 
 html, body, #root, .App {
   height: 100%;
@@ -31,6 +35,10 @@ html, body, #root, .App {
 
 .bg-grey{
   background-color: $bgGrey;
+}
+
+.bg-grey-second{
+  background-color: $bgGreySecond;
 }
 
 .bg-yellow{
@@ -69,9 +77,19 @@ html, body, #root, .App {
   }
 }
 
+.link-nav-active{
+  color: #fcc840 !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .text-black{
   color: black;
   text-decoration: none;
+}
+
+.text-lil-white{
+  color: $bgGreySecond;
 }
 
 .text-yellow{
@@ -104,6 +122,11 @@ img{
   margin-bottom: 60px;
 }
 
+.icon-size{
+  height: 24px;
+  width: 24px;
+}
+
 .next-page{
   border: 1px solid black;
   border-radius: 30px;
@@ -113,6 +136,11 @@ img{
     color: black !important;
     text-decoration: none !important;
   }
+}
+
+.footer-wrapper{
+  margin-top: 80px;
+  background: #33333F;
 }
 
 @media (max-width: 768px) {

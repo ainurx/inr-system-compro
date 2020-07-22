@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
-
 import Navbar from '../component/Navbar'
-import Footer from '../component/Footer'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-class Artikel extends Component{
+class Karya extends Component{
   constructor(props){
     super(props)
     this.state={
@@ -31,15 +29,14 @@ class Artikel extends Component{
       textDesc.classList.remove("d-none")
     }
   }
-    
-    
+  
   render(){
     return(
-      <div className="artikel-root">
-        <Navbar navCallback={this.searchArtikel} artikelActive="link-nav-active"/>
+      <div> 
+        <Navbar navCallback={this.searchArtikel} karyaActive="link-nav-active"/>
         <div className="d-flex artikel-wrapper justify-content-center text-center">
           <div className="position-absolute artikel-text"> 
-            <h1 id="text-heading" className="text-white mx-auto">Artikel</h1>
+            <h1 id="text-heading" className="text-white mx-auto">KARYA</h1>
             <p id="text-desc" className="text-white mx-auto">Facilisi congue eu dui lacus, ultrices magna consectetur tellus est laoreet scelerisque scelerisque faucibus nunc sapien imperdiet quis sed vitae</p>      
             <div id="searchArticels" className="d-none">
               <form id="searcher" className="form-inline my-2 my-lg-0 search-something mx-auto">
@@ -54,31 +51,27 @@ class Artikel extends Component{
               </ul>
             </div>
           </div>
-          <img className="image-shape" src="Subtract.png" alt="shape"/>
+          <img className="image-shape" src="Subtract.png" alt="bg-karya"/>
         </div>
         <div className="container justify-content-center">
           <div className="row justify-content-center">
             <div className="col-md-4">
-              <Link className="card link-card mx-auto" to="/detail-artikel">
-                <img src="1.jpg" className="card-img-top" alt="artikel"/>
-                <div className="card-body">
-                  <h3 className="card-title text-black">Card title</h3>
-                  <p className="card-text text-grey">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div className="ml-4">
-                  <h5 className="text-black">Praja</h5>
-                  <p className="text-grey">Rabu, 20 Jni 2020</p>
+              <Link className="card link-card mx-auto" to="/detail-karya">
+                <img className="img-karya" src="karya.png" alt="karya"/>
+                <div className="card-body">  
+                  <h4 className="text-black">Karya</h4>
+                  <div className="d-flex mt-3">
+                    <img className="img-rounded icon-size" src="team-karya.png" alt="team"/>
+                    <img className="icon-size icon-detail-karya position-absolute" src="icon/eye2.png" alt="detail"/>
+                  </div>
                 </div>
               </Link>
             </div>
           </div>
-          <br/>
-          <div className="next-page text-black mx-auto">Lihat Lainnya</div>
         </div>
-        <Footer/>
       </div>
     )
   }
 }
 
-export default Artikel
+export default Karya

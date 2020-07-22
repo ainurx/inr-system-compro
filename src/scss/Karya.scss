@@ -1,0 +1,42 @@
+.img-karya{
+  height: 241px;
+}
+
+.icon-detail-karya{
+  right: 17px !important;
+}
+
+.bg-karya{
+  height: 640px;
+}
+
+.wrapper-screenshoot{
+  margin-top: -10% ;
+  .wrapper-karya-overview{
+    margin-bottom: 29px !important;
+    .img-karya-overview{
+      width: 540px;
+      height: 409px;
+    }
+  }
+}
+
+
+.wrapper-team-karya{
+  width: 82% !important;
+  margin-top: 52px;
+  padding: 60px 167px;
+  h1{
+    margin-bottom: 40px;
+  }
+  .card-team-karya{
+    width: 100% !important; 
+    padding: 33px 42px;
+    border-radius: 0px 50px 50px 50px;
+    .img-team-karya{
+      width: 134px;
+      height: 134px;
+    }
+  }
+}
+

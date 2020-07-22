@@ -1,0 +1,31 @@
+.card-b-none{
+  border: none;
+  .status-kegiatan-terlaksana{
+    top: 14px;
+    left: 17px;
+    width: 130px;
+    background: #27AE60;
+    opacity: 0.8;
+    border-radius: 20px;
+  }
+  .status-kegiatan-segera{
+    top: 14px;
+    left: 17px;
+    width: 130px;
+    background: #EB5757;
+    opacity: 0.8;
+    border-radius: 20px;
+  }
+  .img-kegiatan{
+    height: 210px;
+  }
+  .icon-pin{
+    width: 14px;
+    height: 20px;
+  }
+  .icon-calendar{
+    width: 20px;
+    height: 22px;
+  }
+}
+

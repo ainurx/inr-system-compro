@@ -13,6 +13,14 @@ import Artikel from'./page/Artikel'
 import DetailArtikel from './page/DetailArtikel'
 import Anggota from './page/Anggota'
 import DetailAnggota from './page/DetailAnggota'
+import Karya from './page/Karya'
+import DetailKarya from './page/DetailKarya'
+import Kegiatan from './page/Kegiatan'
+import DetailKegiatan from './page/DetailKegiatan'
+
+import Profile from './page/Profile'
+import Upload from './page/Upload'
+import UploadKarya from './page/UploadKarya'
 
 const bgLoginRegis = {
   backgroudColor: '#F0F2F5'
@@ -35,6 +43,13 @@ function App () {
           <Route path="/detail-artikel" component={DetailArtikel}/>
           <Route path="/list-anggota" exact component={Anggota}/>
           <Route path="/detail-anggota" component={DetailAnggota}/>
+          <Route path="/list-karya" exact component={Karya}/>
+          <Route path="/detail-karya" component={DetailKarya}/>
+          <Route path="/list-kegiatan" exact component={Kegiatan}/>
+          <Route path="/detail-kegiatan" component={DetailKegiatan}/>
+          <Route path="/profile-saya" component={Profile}/>
+          <Route path="/upload" component={Upload}/>
+          <Route path="/upload-karya" component={UploadKarya}/>
         </Switch>
     )
 }

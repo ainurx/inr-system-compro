@@ -1,0 +1,66 @@
+.sidenav{
+  position: fixed;
+  width: 327px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+
+  background: #33333F;
+  /* bleab */
+ 
+  .icon-back-home{
+    width: 27px;
+    height: 18px;
+    margin-left: 44px;
+    margin-top: 39px;
+  }
+  
+
+  .wrap-content{
+    margin-top: 50px;
+    .icon-inr{
+      width: 54px;
+      height: 46px;
+      margin-bottom: 80px;
+    }
+  
+    .img-profile{
+      width: 94px;
+      height: 94px;
+      margin-bottom: 15px;
+    }
+  
+    .wrap-sidenav-menu{
+      padding-left: 96px;
+      .upload-link{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 33px;
+        float: left;
+      }
+      ul{
+        list-style-type: none;
+        li{
+          margin-left: -40px;
+          Link{
+            &:hover{
+              color: $bgGreySecond;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav{
+    width: 150px;
+  }
+
+  .wrap-content{
+    ul{
+      display: none;
+    }
+  }
+}

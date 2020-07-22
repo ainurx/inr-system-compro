@@ -8,7 +8,23 @@
 
 .nav-link{
   font-weight: bold;
-  color: black !important;
+  color: white !important;
+}
+
+.nav-link-yellow{
+  width: 100px;
+  left: 47px;
+  border: 1px solid $textYellow;
+  border-radius: 20px;
+  font-weight: lighter;
+  color: $textYellow !important;
+}
+
+.nav-daftar{
+  margin-left: 20px;
+  font-weight: lighter;
+  width: 100px;
+  border-radius: 20px;
 }
 
 .search-wrapper{
@@ -28,7 +44,7 @@
   width: 500px;
   height: 46px;
   left: 1103px;
-  top: 19px;
+  top: 12px;
   padding-left: 12px; 
 
   background: rgba(250, 250, 250, 0.5);
@@ -46,5 +62,22 @@
     box-shadow: none;
     background-color: transparent;
   }
+}
+
+.img-profile-dropdown{
+  width: 45px;
+  height: 45px;
+}
+
+.dropdown-profile{
+  background-color: #4C4C5C;
+  
+    .dropdown-link{
+      color: white;
+      &:hover{
+        background-color: #4C4C5C;
+      }
+    }
+  
 }
 

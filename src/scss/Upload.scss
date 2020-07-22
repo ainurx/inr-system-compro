@@ -1,0 +1,11 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: 327px auto;
+  .upload-wrapper{
+    width: 100%;
+    .isi-upload{
+      margin-top: 25%;
+    }
+  }
+}
+
