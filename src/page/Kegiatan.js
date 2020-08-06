@@ -47,7 +47,7 @@ class Kegiatan extends Component{
               </form>
             </div>
           </div>
-          <img className="image-shape" src="Subtract.png" alt="bg-karya"/>
+          <img className="image-shape" src="Subtract.svg" alt="bg-karya"/>
         </div>
         <div className="container justify-content-center">
           <div className="row justify-content-center">

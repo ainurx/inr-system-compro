@@ -54,7 +54,7 @@ class Artikel extends Component{
               </ul>
             </div>
           </div>
-          <img className="image-shape" src="Subtract.png" alt="shape"/>
+          <img className="image-shape" src="Subtract.svg" alt="shape"/>
         </div>
         <div className="container justify-content-center">
           <div className="row justify-content-center">

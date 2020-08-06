@@ -6,7 +6,8 @@ class Navbar extends Component{
     super(props)
     this.state={
       navBackground: "transparent",
-      searchInput: true
+      searchInput: true,
+      navOpacity: 1
     }
   }
 
@@ -14,7 +15,10 @@ class Navbar extends Component{
     document.addEventListener("scroll", () => {
       const backgroundcolor = window.scrollY < 70 ? "transparent" : "black";
 
-      this.setState({ navBackground: backgroundcolor });
+      this.setState({ 
+        navBackground: backgroundcolor,
+        navOpacity: 0.8
+      });
     });
   }
 
@@ -36,7 +40,7 @@ class Navbar extends Component{
     
     return(
       <nav id="myNav" className="navbar navbar-expand-lg navbar-light fixed-top" 
-        style={{backgroundColor:`${this.state.navBackground}`}}>
+        style={{backgroundColor:`${this.state.navBackground}`, opacity: `${this.state.navOpacity}`}}>
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img className="inr-logo" src="icon/logo.png" alt="INR"/>

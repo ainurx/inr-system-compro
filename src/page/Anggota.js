@@ -96,7 +96,7 @@ class Anggota extends Component{
       <div className="bg-anggota">
         <Navbar navCallback={this.handleSearch} anggotaActive="link-nav-active"/>
         <div className="d-flex artikel-wrapper justify-content-center text-center">
-          <img className="image-shape" src="Subtract.png" alt="shape"/>
+          <img className="image-shape" src="Subtract.svg" alt="shape"/>
           <div className="position-absolute artikel-text">
             <h1 id="textAnggota" className="text-white mx-auto">Anggota</h1>
             <p id="textDesc" className="text-white mx-auto">Facilisi congue eu dui lacus, ultrices magna consectetur tellus est laoreet scelerisque scelerisque faucibus nunc sapien imperdiet quis sed vitae</p>

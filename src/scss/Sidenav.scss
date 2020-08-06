@@ -1,10 +1,5 @@
 .sidenav{
-  position: fixed;
-  width: 327px;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-
+  height: 100vh;
   background: #33333F;
   /* bleab */
  
@@ -21,7 +16,7 @@
     .icon-inr{
       width: 54px;
       height: 46px;
-      margin-bottom: 80px;
+      margin-bottom: 50px;
     }
   
     .img-profile{
@@ -31,20 +26,23 @@
     }
   
     .wrap-sidenav-menu{
-      padding-left: 96px;
-      .upload-link{
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 33px;
-        float: left;
-      }
-      ul{
-        list-style-type: none;
-        li{
-          margin-left: -40px;
-          Link{
-            &:hover{
-              color: $bgGreySecond;
+      .menu-profile{
+        padding-left: 97px;
+        .upload-link{
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 33px;
+          float: left;
+        }
+        ul{
+          list-style-type: none;
+          li{
+            margin-left: -40px;
+            .text-lil-white{
+              &:hover{
+                color: $buttonYellow;
+                text-decoration: none;
+              }
             }
           }
         }
@@ -55,12 +53,7 @@
 
 @media (max-width: 768px) {
   .sidenav{
-    width: 150px;
-  }
-
-  .wrap-content{
-    ul{
-      display: none;
-    }
+    position: absolute;
+    height: auto;
   }
 }

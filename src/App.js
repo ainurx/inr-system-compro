@@ -21,6 +21,9 @@ import DetailKegiatan from './page/DetailKegiatan'
 import Profile from './page/Profile'
 import Upload from './page/Upload'
 import UploadKarya from './page/UploadKarya'
+import UploadArtikel from './page/UploadArtikel'
+import EditProfile from './page/EditProfil'
+import UbahKataSandi from './page/UbahKataSandi'
 
 const bgLoginRegis = {
   backgroudColor: '#F0F2F5'
@@ -50,6 +53,9 @@ function App () {
           <Route path="/profile-saya" component={Profile}/>
           <Route path="/upload" component={Upload}/>
           <Route path="/upload-karya" component={UploadKarya}/>
+          <Route path="/upload-artikel" component={UploadArtikel}/>
+          <Route path="/edit-profile" component={EditProfile}/>
+          <Route path="/ubah-kata-sandi" component={UbahKataSandi}/>
         </Switch>
     )
 }

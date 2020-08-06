@@ -7,11 +7,14 @@ class DetailAnggota extends Component{
     return(
       <div className="detail-anggota">
         <Navbar/>
-        <div className="bg-detail-anggota text-center">
-          <img className="rounded-circle photo-profile mx-auto" src="7.jpg" alt="photo"/>
-          <h3>Praja</h3>
-          <p>DPO Inready Workgroup</p>
-          <p>Full Stack Developer</p>
+        <div className="d-flex justify-content-center text-center">
+          <div className="position-absolute">
+            <img className="rounded-circle photo-profile mx-auto" src="7.jpg" alt="photo"/>
+            <h3>Praja</h3>
+            <p>DPO Inready Workgroup</p>
+            <p>Full Stack Developer</p>
+          </div>
+          <img src="Ellipse 1.svg" alt="bg-anggota"/>
         </div>
         <h3 className="text-center text-yellow">PORTFOLIO</h3>
         <hr/>

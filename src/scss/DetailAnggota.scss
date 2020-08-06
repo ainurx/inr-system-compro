@@ -1,25 +1,18 @@
 .detail-anggota{
-  .bg-detail-anggota{
-    width: 100%;
-    height: 20%;
-    left: 0px;
-    top: 0px;
-    padding-top: 87px;
-    padding-bottom: 32px;
-    margin-bottom: 40px;
-    background: linear-gradient(110.09deg, #FCC840 64.2%, #FFA800 107.35%);
-    .photo-profile{
-      width: 202px;
-      height: 202px;
-    }
-    h3{
-      font-weight: bold;
-    }
-    p{
-      color: white;
-      font-weight: bold;
-    }
+  
+  .photo-profile{
+    margin-top: 60px;
+    width: 202px;
+    height: 202px;
   }
+  h3{
+    font-weight: bold;
+  }
+  p{
+    color: white;
+    font-weight: bold;
+  }
+}
   hr{
     width: 140px;
     border: 1px solid $textYellow;
@@ -43,6 +36,5 @@
         height: 24px;
       }
     }
-  }
 }
 
